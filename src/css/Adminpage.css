@@ -1,0 +1,19 @@
+.admin_content-area {
+    flex: 1;
+    background-color: #f7f7f7;
+}
+.sidebarmenulist li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.sidebarmenulist {
+    padding-right: 15px;
+}
+.admin_forms_div form .form-group {
+    flex: unset;
+    padding: 6px;
+}
+.admin_forms_div {
+    max-width: 90%;
+    margin: auto;
+}

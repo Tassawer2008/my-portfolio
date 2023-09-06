@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+.logo_menu img {
+  cursor: pointer;
+}
+section h1 {
+  font-size: 58px;
+  line-height: 75px;
+  font-weight: 900;
+  margin: 0;
+}
+section h2 {
+  font-size: 58px;
+  line-height: 75px;
+  margin: 0;
+  font-weight: 700;
+}
+section h4 {
+  color: rgba(198,201,216,.75);
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+p {
+  color: rgba(198,201,216,.75);
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: 300;
+}
+.App {
+  position: relative;
+  overflow: hidden;
+}
+.logo_menu img {
+  cursor: pointer;
+  object-fit: contain;
+}
+button.btn {
+  background: #f9004d;
+  color: #fff;
+  border: 2px solid #f9004d;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  display: inline-block;
+  font-weight: 500;
+  transition: .3s;
+}
+button.btn:hover {
+  background: transparent;
+  color: #f9004d;
+  border: 2px solid #f9004d;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo_menu img {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*Key Frames*/
+@keyframes typing {
+  0% { width: 0 }
+  50% { width: 100% }
+  100% { width: 0 }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: rgb(249, 0, 77) }
+}
