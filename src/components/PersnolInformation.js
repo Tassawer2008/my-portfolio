@@ -19,11 +19,15 @@ function PersnolInformation() {
     const handleInput = (e,text) =>{
         setInputValue({...inputValue,[text]:e.target.value,})
     }
-    console.log(inputValue)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        console.log(inputValue)
+    }
     return (
         <div className="persnol-info-form">
             <h2>Persnol Information</h2>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="form-row d-flex flex-wrap">
                     <div className="form-group col-md-6">
                         <label>Name</label>
@@ -35,23 +39,23 @@ function PersnolInformation() {
                     </div>
                     <div className="form-group col-md-6">
                         <label>Email</label>
-                        <input type="email" className="form-control" id="inputEmail4" placeholder="test@gmail.com" />
+                        <input type="email" className="form-control"  value={inputValue.email} onChange={(e)=>handleInput(e,'email')} id="inputEmail4" placeholder="test@gmail.com" />
                     </div>
                     <div className="form-group col-md-6">
                         <label>Phone</label>
-                        <input type="text" className="form-control" id="inputPhone4" placeholder="0301-23456789" />
+                        <input type="text" className="form-control"  value={inputValue.phone} onChange={(e)=>handleInput(e,'phone')} id="inputPhone4" placeholder="0301-23456789" />
                     </div>
                     <div className="form-group col-md-12">
                         <label >Address</label>
                     </div>
                     <div className="form-group col-md-4">
-                        <input type="text" className="form-control" id="inputCity" placeholder="City" />
+                        <input type="text" className="form-control"  value={inputValue.city} onChange={(e)=>handleInput(e,'city')} id="inputCity" placeholder="City" />
                     </div>
                     <div className="form-group col-md-4">
-                        <input type="text" className="form-control" id="inputState" placeholder="State" />
+                        <input type="text" className="form-control"  value={inputValue.state} onChange={(e)=>handleInput(e,'state')} id="inputState" placeholder="State" />
                     </div>
                     <div className="form-group col-md-4">
-                        <input type="text" className="form-control" id="inputCountry" placeholder="Country" />
+                        <input type="text" className="form-control"  value={inputValue.country} onChange={(e)=>handleInput(e,'country')} id="inputCountry" placeholder="Country" />
                     </div>
                     <div className="form-group col-md-3">
                         <label>Facebook</label>
