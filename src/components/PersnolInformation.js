@@ -23,6 +23,20 @@ function PersnolInformation() {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log(inputValue)
+        setInputValue({
+            name : '',
+            position : '',
+            email:'',
+            phone: '',
+            city:'',
+            state: '',
+            country: '',
+            facebook_URL:'',
+            linkedIn_URL:'',
+            instagram_URL:'',
+            twitter_URL:'',
+            about_me : ''
+        })
     }
     return (
         <div className="persnol-info-form">
@@ -48,13 +62,13 @@ function PersnolInformation() {
                     <div className="form-group col-md-12">
                         <label >Address</label>
                     </div>
-                    <div className="form-group col-md-4">
+                    <div className="form-group col-md-4 pt-0">
                         <input type="text" className="form-control"  value={inputValue.city} onChange={(e)=>handleInput(e,'city')} id="inputCity" placeholder="City" />
                     </div>
-                    <div className="form-group col-md-4">
+                    <div className="form-group col-md-4 pt-0">
                         <input type="text" className="form-control"  value={inputValue.state} onChange={(e)=>handleInput(e,'state')} id="inputState" placeholder="State" />
                     </div>
-                    <div className="form-group col-md-4">
+                    <div className="form-group col-md-4 pt-0">
                         <input type="text" className="form-control"  value={inputValue.country} onChange={(e)=>handleInput(e,'country')} id="inputCountry" placeholder="Country" />
                     </div>
                     <div className="form-group col-md-3">
